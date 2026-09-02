@@ -111,4 +111,4 @@ Cuéntale al asistente qué preguntas te costaron o qué temas no recordaste —
 
 ## Estado actual
 
-Consulta `applications/log.md` para ver el estado de cada vacante (Preparado / Aplicado / En proceso / Rechazado / Oferta / Descartado). Si querés llevar una lista viva de pendientes/decisiones (barridos recientes, ideas a futuro, notas sueltas), crea un `PENDING.md` siguiendo el mismo espíritu — es opcional, pero ayuda a que el asistente retome el contexto entre sesiones.
+Consulta `applications/log.md` para ver el estado de cada vacante — el archivo mismo explica sus columnas y los valores válidos de "Estado" en su encabezado. Si querés llevar una lista viva de pendientes/decisiones (barridos recientes, ideas a futuro, notas sueltas), crea un `PENDING.md` siguiendo el mismo espíritu — es opcional, pero ayuda a que el asistente retome el contexto entre sesiones.
