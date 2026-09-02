@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# If you're using this repo as your real working copy (not the empty
+# template), uncomment these so your personal data never gets committed:
+# profile/cv_master.md
+# profile/job_sources.md
+# profile/ats_keywords.md
+# profile/interview_review.md
+# applications/*/
+# applications/log.md
+# PENDING.md
