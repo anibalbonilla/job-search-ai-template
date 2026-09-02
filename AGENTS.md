@@ -112,7 +112,7 @@ Cuando pase esto:
 
 Cuéntale al asistente qué preguntas te costaron o qué temas no recordaste — se agrega a `profile/interview_review.md` con un repaso rápido, para que quede como referencia antes de tu siguiente entrevista.
 
-Si ya tenés una entrevista agendada con una empresa específica, decíselo al asistente y puede buscar qué tipo de preguntas suelen hacer ahí (Glassdoor, reseñas de entrevistas, etc.) — esto **no se hace automático en cada aplicación**, solo cuando ya hay una entrevista real programada.
+Si ya tenés una entrevista agendada con una empresa específica, decíselo al asistente y puede buscar qué tipo de preguntas suelen hacer ahí (Glassdoor, reseñas de entrevistas, etc.) — esto **no se hace automático en cada aplicación**, solo cuando ya hay una entrevista real programada. Junto con esa investigación, puede armar un documento de preparación (guion de presentación, respuestas sugeridas a las preguntas esperadas de esa etapa, y preguntas para que le hagas vos al entrevistador) ajustado al tipo de etapa — screening de RRHH vs. técnica — para no sobre-preparar contenido técnico en una llamada de encaje o viceversa.
 
 ## 📊 Estado actual
 
