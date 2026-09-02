@@ -39,7 +39,7 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 
 ```mermaid
 flowchart TD
-    A["Setup, una sola vez:<br/>copiar los .example.md, pip install fpdf2"] --> S{"¿Cómo llega la vacante?"}
+    A["Setup, una sola vez:<br/>copiar los .example.md,<br/>pip install fpdf2"] --> S{"¿Cómo llega la vacante?"}
     S -->|"La encontraste vos<br/>(LinkedIn, portal, etc.)"| B["Pegás el texto/link<br/>en el chat con tu asistente"]
     S -->|"Querés que busque por vos"| B0["Pedís un barrido:<br/>search_jobs.py o revisar<br/>profile/job_sources.md"]
     B0 --> B1["Te devuelve candidatas<br/>con fit ya evaluado"]
@@ -48,12 +48,12 @@ flowchart TD
     B --> C{"Evalúa el fit contra<br/>profile/cv_master.md"}
     C -->|"Gap real, turno incompatible,<br/>o duda de legitimidad"| D["Te avisa antes<br/>de escribir nada"]
     D -.->|"decidís si seguir"| S
-    C -->|"Buen fit"| E["Crea applications/empresa-puesto/<br/>con cv.md y cover_letter.md ajustados"]
+    C -->|"Buen fit"| E["Crea applications/<br/>empresa-puesto/<br/>con cv.md y cover_letter.md<br/>ajustados"]
     E --> F["Investiga rango salarial<br/>y arma notes.md"]
     F --> G["Corre ats_check.py<br/>y ajusta redacción"]
     G --> H["Exporta a PDF"]
     H --> I["Subís el PDF vos mismo<br/>al portal / LinkedIn"]
-    I --> J["Avisás que aplicaste →<br/>se actualiza applications/00-log.md"]
+    I --> J["Avisás que aplicaste →<br/>se actualiza<br/>applications/00-log.md"]
     J --> K{"¿Respuesta en<br/>1-2 semanas?"}
     K -->|"No"| L["Mensaje de seguimiento<br/>al reclutador"]
     K -->|"Sí, entrevista agendada"| M["Guion de preparación<br/>+ interview_review.md"]
