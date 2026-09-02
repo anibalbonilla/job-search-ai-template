@@ -36,13 +36,30 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 ## 🗂️ Estructura
 
 ```
-AGENTS.md            Instrucciones de flujo para el asistente de IA (y para vos)
-profile/              Tu CV maestro, fuentes de búsqueda, keywords ATS
-scripts/              search_jobs.py, md_to_pdf.py, ats_check.py
-applications/         Una carpeta por vacante + log.md
+.
+├── AGENTS.md                          Instrucciones de flujo para el asistente de IA (y para vos)
+├── README.md
+├── profile/
+│   ├── cv_master.example.md           → copiar a cv_master.md: toda tu experiencia real, sin editar por vacante
+│   ├── cover_letter_template.md       Plantilla base de carta de presentación
+│   ├── job_sources.example.md         → copiar a job_sources.md: plataformas donde buscar
+│   ├── ats_keywords.example.md        → copiar a ats_keywords.md: vocabulario ATS de tu campo
+│   └── interview_review.example.md    → copiar a interview_review.md: log de temas fallados en entrevistas
+├── scripts/
+│   ├── search_jobs.py                 Busca en RemoteOK, Remotive, Jobicy y Arbeitnow por keywords
+│   ├── md_to_pdf.py                   Convierte un .md (CV o carta) a PDF ATS-friendly
+│   └── ats_check.py                   Compara un CV contra una vacante y marca keywords que faltan
+└── applications/
+    ├── log.md                         Índice de todas las vacantes vistas/aplicadas
+    └── <empresa>-<puesto>/            Una carpeta por vacante a la que aplicás
+        ├── cv.md                          CV ajustado a esa vacante (editable en Markdown)
+        ├── cover_letter.md                Carta ajustada a esa vacante
+        ├── notes.md                       Descripción original + notas de fit + rango salarial
+        ├── <Tu Nombre> CV.pdf             PDF final, listo para subir
+        └── <Tu Nombre> Cover Letter.pdf   PDF final, listo para subir
 ```
 
-Esto es solo el resumen de un vistazo. El árbol completo y detallado — qué contiene cada carpeta `applications/<empresa>-<puesto>/` (cv.md, cover_letter.md, notes.md, los PDFs finales) y qué hace cada script — está en la sección "Estructura del proyecto" de `AGENTS.md`.
+Cada carpeta `applications/<empresa>-<puesto>/` se crea de cero por vacante — el nombre de la carpeta y los `.md` de adentro los genera el asistente siguiendo el flujo de `AGENTS.md`, no hace falta crearlos a mano.
 
 ## 🔒 Si vas a subir tu copia (con tus datos reales) a un repo público
 
