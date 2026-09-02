@@ -43,7 +43,7 @@ Cada carpeta `applications/<empresa>-<puesto>/` se crea de cero por vacante sigu
 ## 🔄 Flujo estándar para una vacante nueva
 
 1. **Pega el texto de la vacante** (o el link, si se puede leer directo) en la conversación.
-2. El asistente evalúa el match contra `profile/cv_master.md` de forma honesta — avisa de vacíos reales antes de escribir nada. Si mencionas experiencia real que falta en el CV maestro, se agrega ahí primero (así queda disponible para futuras vacantes). El match no es solo técnico: si la vacante exige un turno/horario específico o algo incompatible con tu vida, eso también se marca como punto a confirmar antes de avanzar — nunca se asume que lo aceptás solo porque el resto del fit es fuerte.
+2. El asistente evalúa el match contra `profile/cv_master.md` de forma honesta — avisa de vacíos reales antes de escribir nada. Si mencionas experiencia real que falta en el CV maestro, se agrega ahí primero (así queda disponible para futuras vacantes). El match no es solo técnico: si la vacante exige un turno/horario específico o algo incompatible con tu vida, eso también se marca como punto a confirmar antes de avanzar — nunca se asume que lo aceptás solo porque el resto del fit es fuerte. **Si hay señales de duda** (agregador desconocido, salario desalineado con el mercado, sin nombre de empresa visible, o cualquier otra bandera roja) — el asistente verifica la legitimidad de la fuente/empresa antes de seguir, en vez de invertir tiempo preparando CV/carta para algo que podría no ser real. Esto no es un paso automático para toda vacante — solo cuando hay algo que no cuadra.
 3. Se crea la carpeta `applications/<empresa>-<puesto>/` con `cv.md` y `cover_letter.md` ajustados — nunca se inventa experiencia. Idioma: se infiere del idioma en que está escrita la vacante, no se pregunta cada vez — pero puedes pedir la otra versión cuando quieras.
 4. Se investiga un rango salarial de referencia y se agrega a `notes.md`, junto con la descripción original de la vacante y las notas de fit para tu entrevista.
 5. Se corre `ats_check.py` (CV vs. la vacante) y se ajusta la redacción del CV si hay coincidencias de fondo que quedaron con distinta palabra — sin inventar nada, solo alineando el wording a lo que ya es cierto.
@@ -111,6 +111,8 @@ Cuando pase esto:
 ## 🎓 Después de una entrevista o examen
 
 Cuéntale al asistente qué preguntas te costaron o qué temas no recordaste — se agrega a `profile/interview_review.md` con un repaso rápido, para que quede como referencia antes de tu siguiente entrevista.
+
+Si ya tenés una entrevista agendada con una empresa específica, decíselo al asistente y puede buscar qué tipo de preguntas suelen hacer ahí (Glassdoor, reseñas de entrevistas, etc.) — esto **no se hace automático en cada aplicación**, solo cuando ya hay una entrevista real programada.
 
 ## 📊 Estado actual
 
