@@ -37,6 +37,27 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 
 ## 🚀 Cómo usarlo día a día
 
+```mermaid
+flowchart TD
+    A["Setup, una sola vez:<br/>copiar los .example.md, pip install fpdf2"] --> B["Pegás una vacante<br/>en el chat con tu asistente"]
+    B --> C{"Evalúa el fit contra<br/>profile/cv_master.md"}
+    C -->|"Gap real, turno incompatible,<br/>o duda de legitimidad"| D["Te avisa antes<br/>de escribir nada"]
+    D -.->|"decidís si seguir"| B
+    C -->|"Buen fit"| E["Crea applications/empresa-puesto/<br/>con cv.md y cover_letter.md ajustados"]
+    E --> F["Investiga rango salarial<br/>y arma notes.md"]
+    F --> G["Corre ats_check.py<br/>y ajusta redacción"]
+    G --> H["Exporta a PDF"]
+    H --> I["Subís el PDF vos mismo<br/>al portal / LinkedIn"]
+    I --> J["Avisás que aplicaste →<br/>se actualiza applications/00-log.md"]
+    J --> K{"¿Respuesta en<br/>1-2 semanas?"}
+    K -->|"No"| L["Mensaje de seguimiento<br/>al reclutador"]
+    K -->|"Sí, entrevista agendada"| M["Guion de preparación<br/>+ interview_review.md"]
+    L -.-> B
+    M -.-> B
+```
+
+Este ciclo (B → J) se repite por cada vacante nueva — no hay que rehacer el setup ni resetear nada entre una y otra.
+
 ### La primera vez (justo después del setup)
 
 1. Abre una conversación nueva con tu asistente de IA **en esta misma carpeta** (que la vea como directorio de trabajo).
