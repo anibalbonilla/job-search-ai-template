@@ -35,6 +35,30 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 8. Abre una conversación con tu asistente de IA en esta carpeta y dile que lea `AGENTS.md` para entender el flujo. (Con Claude Code, opencode, Cursor, y herramientas similares esto suele pasar automático al detectar `AGENTS.md` en la raíz del proyecto.)
 9. Empieza a pegarle vacantes.
 
+## 🚀 Cómo usarlo día a día
+
+### La primera vez (justo después del setup)
+
+1. Abre una conversación nueva con tu asistente de IA **en esta misma carpeta** (que la vea como directorio de trabajo).
+2. Si tu herramienta no lee `AGENTS.md` automáticamente al abrir el proyecto (Claude Code, opencode y similares sí lo hacen solos), dile explícitamente: *"lee AGENTS.md antes de empezar"*.
+3. Pega el texto completo de una vacante real (o el link, si tu asistente puede leerlo directo) en el chat.
+4. El asistente va a comparar la vacante contra tu `profile/cv_master.md` y decirte honestamente qué tan buen fit es y qué vacíos reales tiene — antes de escribir nada. Si le contás experiencia real que falta en tu CV maestro, la agrega ahí primero.
+5. Si el fit tiene sentido, el asistente crea `applications/<empresa>-<puesto>/` con `cv.md` y `cover_letter.md` ajustados a esa vacante (nunca inventa experiencia), agrega notas de la vacante y un rango salarial de referencia, y exporta a PDF.
+6. Revisa los `.md` y los PDF generados. Vos sos quien sube el PDF al portal/LinkedIn — el asistente nunca aplica en tu nombre.
+7. Avísale cuando la envíes, para que actualice el estado en `applications/00-log.md`.
+
+No hace falta ningún comando especial para "arrancar" el sistema — el paso 3 (pegar una vacante) es lo que dispara todo el flujo.
+
+### A partir de la segunda vacante en adelante
+
+- **No hay nada que resetear ni reconfigurar.** Simplemente abre una conversación nueva en la carpeta y repite el paso 3 de arriba (pegar la siguiente vacante) — cada una crea su propia carpeta en `applications/`, no pisa las anteriores.
+- **¿Quieres ver en qué estado quedó todo?** Pídele al asistente que resuma `applications/00-log.md`, o ábrelo vos mismo — el archivo explica sus propias columnas y los valores válidos de "Estado" (Preparado / Aplicado / En proceso / Rechazado / Oferta / Descartado) en el encabezado.
+- **¿Quieres que retome contexto de sesiones anteriores** (barridos ya hechos, decisiones tomadas, cosas pendientes)? Llevá `PENDING.md` actualizado (ver Setup, paso 7) y pídele al asistente que lo lea al empezar — así no repite trabajo ni te vuelve a preguntar algo que ya decidiste.
+- **¿Quieres buscar vacantes de forma proactiva** (sin tener ya un posting pegado)? Corré `python3 scripts/search_jobs.py` vos mismo (ver comandos en `AGENTS.md`), o pídele al asistente que haga un "barrido" por las fuentes de `profile/job_sources.md` (LinkedIn, portales locales, empresas objetivo, etc.).
+- **¿Tuviste una entrevista o examen?** Contale al asistente qué te costó — lo agrega a `profile/interview_review.md` como referencia para la próxima vez.
+- **¿Cambió tu CV o ganaste una skill nueva?** Editá `profile/cv_master.md` directamente, o pedíselo al asistente en la conversación — así queda disponible para todas las vacantes futuras.
+- Todo el detalle operativo (qué preguntar en la llamada, cómo manejar un Talent Network, seguimiento a reclutadores, etc.) vive en `AGENTS.md` — el asistente lo consulta solo, pero también podés leerlo vos si querés entender el criterio completo.
+
 ## 🗂️ Estructura
 
 ```
