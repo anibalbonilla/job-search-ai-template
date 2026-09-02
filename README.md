@@ -39,10 +39,15 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 
 ```mermaid
 flowchart TD
-    A["Setup, una sola vez:<br/>copiar los .example.md, pip install fpdf2"] --> B["Pegás una vacante<br/>en el chat con tu asistente"]
+    A["Setup, una sola vez:<br/>copiar los .example.md, pip install fpdf2"] --> S{"¿Cómo llega la vacante?"}
+    S -->|"La encontraste vos<br/>(LinkedIn, portal, etc.)"| B["Pegás el texto/link<br/>en el chat con tu asistente"]
+    S -->|"Querés que busque por vos"| B0["Pedís un barrido:<br/>search_jobs.py o revisar<br/>profile/job_sources.md"]
+    B0 --> B1["Te devuelve candidatas<br/>con fit ya evaluado"]
+    B1 --> B2["Elegís una<br/>y confirmás seguir con esa"]
+    B2 --> C
     B --> C{"Evalúa el fit contra<br/>profile/cv_master.md"}
     C -->|"Gap real, turno incompatible,<br/>o duda de legitimidad"| D["Te avisa antes<br/>de escribir nada"]
-    D -.->|"decidís si seguir"| B
+    D -.->|"decidís si seguir"| S
     C -->|"Buen fit"| E["Crea applications/empresa-puesto/<br/>con cv.md y cover_letter.md ajustados"]
     E --> F["Investiga rango salarial<br/>y arma notes.md"]
     F --> G["Corre ats_check.py<br/>y ajusta redacción"]
@@ -52,11 +57,11 @@ flowchart TD
     J --> K{"¿Respuesta en<br/>1-2 semanas?"}
     K -->|"No"| L["Mensaje de seguimiento<br/>al reclutador"]
     K -->|"Sí, entrevista agendada"| M["Guion de preparación<br/>+ interview_review.md"]
-    L -.-> B
-    M -.-> B
+    L -.-> S
+    M -.-> S
 ```
 
-Este ciclo (B → J) se repite por cada vacante nueva — no hay que rehacer el setup ni resetear nada entre una y otra.
+Este ciclo (S → J) se repite por cada vacante nueva — no hay que rehacer el setup ni resetear nada entre una y otra. Hay dos formas de arrancarlo: pegando una vacante que ya encontraste vos, o pidiéndole al asistente que busque por vos (`search_jobs.py` para los 4 agregadores con API pública, o una revisión asistida del resto de `profile/job_sources.md` — ver detalle en "A partir de la segunda vacante" más abajo).
 
 ### La primera vez (justo después del setup)
 
