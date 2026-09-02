@@ -51,7 +51,7 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 │   ├── md_to_pdf.py                   Convierte un .md (CV o carta) a PDF ATS-friendly
 │   └── ats_check.py                   Compara un CV contra una vacante y marca keywords que faltan
 └── applications/
-    ├── log.md                         Índice de todas las vacantes vistas/aplicadas
+    ├── 00-log.md                      Índice de todas las vacantes vistas/aplicadas (prefijo "00-" para que ordene primero)
     └── <empresa>-<puesto>/            Una carpeta por vacante a la que aplicás
         ├── cv.md                          CV ajustado a esa vacante (editable en Markdown)
         ├── cover_letter.md                Carta ajustada a esa vacante
@@ -72,7 +72,7 @@ profile/job_sources.md
 profile/ats_keywords.md
 profile/interview_review.md
 applications/*/
-applications/log.md
+applications/00-log.md
 PENDING.md
 ```
 

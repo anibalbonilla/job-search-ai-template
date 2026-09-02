@@ -29,7 +29,7 @@ Si estás leyendo esto como asistente de IA en una sesión de setup inicial con 
 │   ├── search_jobs.py                 Busca en agregadores remotos con API pública por palabras clave
 │   └── ats_check.py                   Compara un CV contra una vacante usando profile/ats_keywords.md
 └── applications/
-    ├── log.md                         Índice de todas las vacantes vistas/aplicadas
+    ├── 00-log.md                      Índice de todas las vacantes vistas/aplicadas (prefijo "00-" para que ordene primero)
     └── <empresa>-<puesto>/            Una carpeta por vacante a la que aplicás
         ├── cv.md                          CV ajustado a esa vacante (editable en Markdown)
         ├── cover_letter.md                Carta ajustada a esa vacante
@@ -48,7 +48,7 @@ Cada carpeta `applications/<empresa>-<puesto>/` se crea de cero por vacante sigu
 4. Se investiga un rango salarial de referencia y se agrega a `notes.md`, junto con la descripción original de la vacante y las notas de fit para tu entrevista.
 5. Se corre `ats_check.py` (CV vs. la vacante) y se ajusta la redacción del CV si hay coincidencias de fondo que quedaron con distinta palabra — sin inventar nada, solo alineando el wording a lo que ya es cierto.
 6. Se exporta a PDF (ver comando abajo).
-7. Se agrega la fila correspondiente a `applications/log.md`, guardando siempre el **link directo a la vacante** en `notes.md` — necesario para poder ubicar después a quién la publicó.
+7. Se agrega la fila correspondiente a `applications/00-log.md`, guardando siempre el **link directo a la vacante** en `notes.md` — necesario para poder ubicar después a quién la publicó.
 8. Tú subes el PDF al portal y avisas cuando la envíes, para actualizar el estado en el log.
 9. **Contacto con reclutador (opcional):** cuando aplicás a una vacante nueva, se puede revisar quién la publicó y redactar un mensaje corto de conexión/seguimiento para que lo envíes tú mismo (nunca lo envía el asistente sin que lo confirmes).
 
@@ -116,4 +116,4 @@ Si ya tenés una entrevista agendada con una empresa específica, decíselo al a
 
 ## 📊 Estado actual
 
-Consulta `applications/log.md` para ver el estado de cada vacante — el archivo mismo explica sus columnas y los valores válidos de "Estado" en su encabezado. Si querés llevar una lista viva de pendientes/decisiones (barridos recientes, ideas a futuro, notas sueltas), crea un `PENDING.md` siguiendo el mismo espíritu — es opcional, pero ayuda a que el asistente retome el contexto entre sesiones.
+Consulta `applications/00-log.md` para ver el estado de cada vacante — el archivo mismo explica sus columnas y los valores válidos de "Estado" en su encabezado. Si querés llevar una lista viva de pendientes/decisiones (barridos recientes, ideas a futuro, notas sueltas), crea un `PENDING.md` siguiendo el mismo espíritu — es opcional, pero ayuda a que el asistente retome el contexto entre sesiones.
