@@ -1,8 +1,8 @@
-# Job Search Assistant — starter template
+# 🧳 Job Search Assistant — starter template
 
 Un sistema de búsqueda de empleo diseñado para operarse junto a un asistente de IA con acceso a herramientas de archivos (y opcionalmente navegador/búsqueda web) — Claude Code, ChatGPT con Code Interpreter/archivos, Gemini CLI, Cursor, opencode, etc. `AGENTS.md` es la convención de archivo que varias de estas herramientas (opencode, Amp, Codex, Claude Code) leen automáticamente al abrir el proyecto.
 
-## Qué hace
+## ✅ Qué hace
 
 - Mantiene un **CV maestro** (`profile/cv_master.md`) con toda tu experiencia real, y genera versiones **ajustadas por vacante** (nunca inventadas) en `applications/<empresa>-<puesto>/`.
 - Convierte esas versiones a **PDF ATS-friendly** con un script propio (sin depender de Word/Canva).
@@ -12,16 +12,16 @@ Un sistema de búsqueda de empleo diseñado para operarse junto a un asistente d
 - Lleva un **log de aplicaciones** y un registro de contacto con reclutadores.
 - Todo el criterio operativo (cuándo evaluar un gap como real, cuándo declinar un turno, cómo manejar formularios de compensación, cómo agregar fuentes nuevas, etc.) vive en `AGENTS.md` — es lo que el asistente lee para saber cómo comportarse.
 
-## Idioma de este proyecto
+## 🌐 Idioma de este proyecto
 
 Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`) está escrito en **español** — es una limitación de acceso conocida, no un accidente: si no leés español no vas a poder auto-servirte el setup, aunque el asistente de IA sí entiende las instrucciones en español sin problema y puede escribir tus CVs/cartas en inglés igual (ver punto anterior). Una versión en inglés queda pendiente para un fork futuro.
 
-## Qué NO hace
+## 🚫 Qué NO hace
 
 - No aplica por vos. Nunca envía formularios ni sube archivos a un portal sin tu confirmación explícita.
 - No inventa experiencia. El principio central de todo el sistema es: si no está en tu CV maestro, no aparece en ningún CV ajustado hasta que lo confirmes como real.
 
-## Setup
+## ⚙️ Setup
 
 1. Clona o copia esta carpeta.
 2. `pip install fpdf2` (única dependencia externa, usada por `scripts/md_to_pdf.py`).
@@ -33,7 +33,7 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 7. Abre una conversación con tu asistente de IA en esta carpeta y dile que lea `AGENTS.md` para entender el flujo. (Con Claude Code, opencode, Cursor, y herramientas similares esto suele pasar automático al detectar `AGENTS.md` en la raíz del proyecto.)
 8. Empieza a pegarle vacantes.
 
-## Estructura
+## 🗂️ Estructura
 
 ```
 AGENTS.md            Instrucciones de flujo para el asistente de IA (y para vos)
@@ -44,7 +44,7 @@ applications/         Una carpeta por vacante + log.md
 
 Esto es solo el resumen de un vistazo. El árbol completo y detallado — qué contiene cada carpeta `applications/<empresa>-<puesto>/` (cv.md, cover_letter.md, notes.md, los PDFs finales) y qué hace cada script — está en la sección "Estructura del proyecto" de `AGENTS.md`.
 
-## Si vas a subir tu copia (con tus datos reales) a un repo público
+## 🔒 Si vas a subir tu copia (con tus datos reales) a un repo público
 
 Este template está pensado para compartirse vacío. Si lo convertís en tu copia de trabajo con tus datos reales, **no lo subas tal cual a un repo público** — agregá algo como esto a `.gitignore` antes de tu primer commit:
 
