@@ -31,8 +31,9 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 4. Copia `profile/ats_keywords.example.md` → `profile/ats_keywords.md`. **No lo llenes a mano de una** — con `cv_master.md` ya listo, pídele a tu asistente que lo lea y te proponga las categorías/keywords reales de tu campo. No es una sincronización automática (si más adelante actualizás tu CV, hay que pedirle que revise `ats_keywords.md` de nuevo), pero es mucho más rápido y preciso que armarlo desde cero vos mismo.
 5. Copia `profile/job_sources.example.md` → `profile/job_sources.md`. Los 4 agregadores con API pública (RemoteOK, Remotive, Jobicy, Arbeitnow) ya vienen con su URL real y funcionan igual para cualquier campo — no hay que tocarlos. Todo lo demás (nicho de tu industria, staffing, portales locales, empresas objetivo) depende de tu campo/país específico: pídele a tu asistente que investigue y te proponga opciones concretas para tu caso en vez de dejarlo en blanco.
 6. Copia `profile/interview_review.example.md` → `profile/interview_review.md` (opcional, se usa después de tu primera entrevista).
-7. Abre una conversación con tu asistente de IA en esta carpeta y dile que lea `AGENTS.md` para entender el flujo. (Con Claude Code, opencode, Cursor, y herramientas similares esto suele pasar automático al detectar `AGENTS.md` en la raíz del proyecto.)
-8. Empieza a pegarle vacantes.
+7. Copia `PENDING.example.md` → `PENDING.md` (opcional, lista viva de pendientes/decisiones — ayuda a que el asistente retome el contexto entre sesiones).
+8. Abre una conversación con tu asistente de IA en esta carpeta y dile que lea `AGENTS.md` para entender el flujo. (Con Claude Code, opencode, Cursor, y herramientas similares esto suele pasar automático al detectar `AGENTS.md` en la raíz del proyecto.)
+9. Empieza a pegarle vacantes.
 
 ## 🗂️ Estructura
 
@@ -40,6 +41,7 @@ Todo el contenido de este template (`README.md`, `AGENTS.md`, los `.example.md`)
 .
 ├── AGENTS.md                          Instrucciones de flujo para el asistente de IA (y para vos)
 ├── README.md
+├── PENDING.example.md                 → copiar a PENDING.md (opcional): lista viva de pendientes/decisiones
 ├── profile/
 │   ├── cv_master.example.md           → copiar a cv_master.md: toda tu experiencia real, sin editar por vacante
 │   ├── cover_letter_template.md       Plantilla base de carta de presentación

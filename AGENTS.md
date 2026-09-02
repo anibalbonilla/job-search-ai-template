@@ -18,6 +18,7 @@ Si estás leyendo esto como asistente de IA en una sesión de setup inicial con 
 ```
 .
 ├── AGENTS.md                          Esta guía — instrucciones de flujo para el asistente de IA (y para vos)
+├── PENDING.md                         Lista viva de pendientes/decisiones (opcional, copia PENDING.example.md)
 ├── profile/
 │   ├── cv_master.md                   CV maestro — toda tu experiencia real, sin editar por vacante (copia cv_master.example.md)
 │   ├── cover_letter_template.md       Plantilla base de carta de presentación (placeholders {{ASI}})
@@ -116,4 +117,4 @@ Si ya tenés una entrevista agendada con una empresa específica, decíselo al a
 
 ## 📊 Estado actual
 
-Consulta `applications/00-log.md` para ver el estado de cada vacante — el archivo mismo explica sus columnas y los valores válidos de "Estado" en su encabezado. Si querés llevar una lista viva de pendientes/decisiones (barridos recientes, ideas a futuro, notas sueltas), crea un `PENDING.md` siguiendo el mismo espíritu — es opcional, pero ayuda a que el asistente retome el contexto entre sesiones.
+Consulta `applications/00-log.md` para ver el estado de cada vacante — el archivo mismo explica sus columnas y los valores válidos de "Estado" en su encabezado. Si querés llevar una lista viva de pendientes/decisiones (barridos recientes, ideas a futuro, notas sueltas), copiá `PENDING.example.md` → `PENDING.md` — es opcional, pero ayuda a que el asistente retome el contexto entre sesiones.
